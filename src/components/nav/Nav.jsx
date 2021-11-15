@@ -33,9 +33,9 @@ function Nav() {
         <nav>
             <h2>ANIMEdn59</h2>
             <div className="navlinks">
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/top10">Top 10</NavLink>
-                <NavLink to="/trending">Trending</NavLink>
+                <NavLink activeClassName="active" to="/">Home</NavLink>
+                <NavLink activeClassName="active" to="/top10">Top 10</NavLink>
+                <NavLink activeClassName="active" to="/trending">Trending</NavLink>
             </div>
             <div className="actions">
                 <button className="action-btn" onClick={modeChangeHandler}>
