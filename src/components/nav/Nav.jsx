@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 import './Nav.css'
+import { IconArrowsDoubleSeNw } from '@tabler/icons';
 
 function Nav() {
     const sun = <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="36" height="36" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -33,11 +34,19 @@ function Nav() {
         <nav>
             <h2>ANIMEdn59</h2>
             <div className="navlinks">
-                <NavLink activeClassName="active" to="/">Home</NavLink>
-                <NavLink activeClassName="active" to="/top10">Top 10</NavLink>
-                <NavLink activeClassName="active" to="/trending">Trending</NavLink>
+                <NavLink activeClassName="active" to="anime/">Home</NavLink>
+                <NavLink activeClassName="active" to="anime/tvSeries">Tv Series</NavLink>
+                <NavLink activeClassName="active" to="anime/movies">Movies</NavLink>
+                <NavLink activeClassName="active" to="anime/top10">Top 10</NavLink>
+                <NavLink activeClassName="active" to="anime/trending">Trending</NavLink>
             </div>
             <div className="actions">
+                <button className="action-btn" onClick={modeChangeHandler}>
+                <IconArrowsDoubleSeNw
+                    size={36} // set custom `width` and `height`
+                    stroke={2}  // set `stroke-width`
+                />
+                </button>
                 <button className="action-btn" onClick={modeChangeHandler}>
                 {icon}
                 </button>
